@@ -87,15 +87,24 @@ button:active {
   padding: 1rem;
 }
 
+[draggable="true"] {
+  /*
+ To prevent user selecting inside the drag source
+*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .projects li {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
   padding: 1rem;
   margin: 1rem;
   background-color: white;
-  cursor: move;
-}
-.projects li:active {
-  background-color: white;
+  cursor: grab;
+  visibility: visible;
+  opacity: 1;
 }
 
 .projects li h2 {
